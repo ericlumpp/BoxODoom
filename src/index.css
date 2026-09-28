@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-neutral-950 text-neutral-100 font-sans antialiased selection:bg-red-700 selection:text-white;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cinzel-dec {
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.font-gothic {
+  font-family: 'UnifrakturMaguntia', cursive;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: #331111;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #771a1a;
+}
+
+/* Glow and animations */
+@keyframes doom-pulse {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(220, 38, 38, 0.4), inset 0 0 40px rgba(185, 28, 28, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(220, 38, 38, 0.8), 0 0 80px rgba(147, 51, 234, 0.3), inset 0 0 60px rgba(220, 38, 38, 0.6);
+  }
+}
+
+@keyframes rune-flicker {
+  0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 8px #ef4444); }
+  50% { opacity: 0.5; filter: drop-shadow(0 0 3px #991b1b); }
+  75% { opacity: 0.95; filter: drop-shadow(0 0 14px #dc2626); }
+}
+
+@keyframes shake-violent {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  10% { transform: translate(-4px, -3px) rotate(-1deg); }
+  20% { transform: translate(4px, 3px) rotate(1.5deg); }
+  30% { transform: translate(-3px, 4px) rotate(-1deg); }
+  40% { transform: translate(3px, -2px) rotate(1deg); }
+  50% { transform: translate(-2px, 2px) rotate(-0.5deg); }
+  60% { transform: translate(2px, -3px) rotate(1deg); }
+  70% { transform: translate(-4px, 1px) rotate(-1deg); }
+  80% { transform: translate(3px, 2px) rotate(0.5deg); }
+  90% { transform: translate(-1px, -2px) rotate(-0.5deg); }
+}
+
+@keyframes float-ember {
+  0% { transform: translateY(0) scale(1); opacity: 0.8; }
+  100% { transform: translateY(-120px) scale(0.3); opacity: 0; }
+}
+
+.animate-doom-pulse {
+  animation: doom-pulse 2.5s infinite ease-in-out;
+}
+
+.animate-rune {
+  animation: rune-flicker 2s infinite ease-in-out;
+}
+
+.animate-shake {
+  animation: shake-violent 0.4s infinite;
+}
+
+/* 3D Dice styling */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+

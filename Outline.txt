@@ -1,0 +1,20 @@
+src/
+├── App.tsx                              # Main application (dual view, DM, player, Foundry export)
+├── main.tsx                             # React entry point
+├── index.css                            # Tailwind + Cinzel/Gothic fonts + doom animations
+├── types/index.ts                       # TS types: Character, RollConfig, RollResult, etc.
+├── data/dnd5eData.ts                    # 18 skills, 6 abilities, 4 default characters, modifier logic
+├── services/demonAudio.ts               # [DEMON LAUGH AUDIO LINK] anchor + Web Audio demon synthesizer
+└── components/
+    ├── DMConsole.tsx                    # Master control: character, skill/save/ability, adv/disadv, DC, stakes
+    ├── BoxOfDoomArena.tsx               # Custom Box of Doom IMG tray + 3D animated D20s + Pass/Fail banner
+    ├── PlayerView.tsx                   # Player screen / stream overlay (honors hidden DC)
+    ├── FoundryModuleExporter.tsx        # Live code viewer + download .zip (module.json, .js, .css, .hbs, README)
+    └── ClientPreviewModal.tsx           # Client showcase reel + one-click demo triggers
+
+public/images/
+├── box-of-doom-interior.jpg             # Custom Box of Doom arena backdrop (generated)
+├── box-of-doom-chest.jpg                # Ominous chest artifact hero shot
+└── avatars/
+    ├── tiefling_warlock.jpg             # Brennan / Malakor portrait token
+    └── elf_paladin.jpg                  # Aabria / Lady Aurelia portrait token
